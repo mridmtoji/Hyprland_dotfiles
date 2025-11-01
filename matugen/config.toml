@@ -1,0 +1,13 @@
+[config]
+version_check = false
+caching = true
+
+
+[templates.hyprland]
+input_path = "./templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/hyprland-colors.conf"
+post_hook = "hyprctl reload"
+
+[templates.ghostty]
+input_path = "./templates/ghostty-colors"
+output_path = "~/.config/ghostty/themes/ghostty-colors"

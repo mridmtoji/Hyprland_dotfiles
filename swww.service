@@ -1,0 +1,11 @@
+[Unit]
+Description=Swww Daemon for Hyprland
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swww-daemon -f xrgb
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
