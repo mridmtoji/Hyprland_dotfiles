@@ -3,18 +3,8 @@
 WALLPAPERS_DIR="$HOME/Pictures/Wallpapers/"
 
 TRANSITIONS=(
-    simple
-    fade
-    left
-    right
-    top
-    bottom
-    wipe
-    wave
-    grow
-    center
-    any
-    outer
+    simple fade left right top bottom
+    wipe wave grow center any outer
 )
 
 TRANSITION=${TRANSITIONS[$RANDOM % ${#TRANSITIONS[@]}]}
@@ -31,12 +21,17 @@ FILE=$(zenity --file-selection \
 
 [ -z "$FILE" ] && exit 0
 
-matugen image "$FILE" 
+matugen image "$FILE" --mode dark --json hex
 
 sleep 0.3
 
+# Apply colors to running terminals (if using sequences method)
+# pkill -USR1 foot
+
+hyprctl reload
+
 swww clear-cache
-sleep 1.0 &
+sleep 0.5
 
 swww img "$FILE" \
   --transition-type $TRANSITION \
@@ -45,3 +40,4 @@ swww img "$FILE" \
   --transition-fps 60
 
 ln -sf "$FILE" ~/.cache/current_wallpaper
+

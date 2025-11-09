@@ -111,8 +111,6 @@ Item {
         repeat: true
         onTriggered: {
             Hyprland.refreshWorkspaces()
-            // Force model update
-            workspaceRow.children[0].model = workspaceRow.children[0].model
         }
     }
     

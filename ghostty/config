@@ -1,7 +1,7 @@
-theme = ghostty-colors
+theme = "Matugen"
 
 font-family = JetBrainsMono Nerd Font
-font-size= 20
+font-size = 14
 
 background-opacity = 0.90
 background-blur = 25
