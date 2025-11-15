@@ -12,9 +12,9 @@ post_hook = "hyprctl reload"
 input_path = "./templates/foot-colors.ini"
 output_path = "~/.config/foot/foot-colors.ini"
 
-[templates.starship]
-input_path = "./templates/starship-colors.toml"
-output_path = "~/.config/starship.toml"
+# [templates.starship]
+# input_path = "./templates/starship-colors.toml"
+# output_path = "~/.config/starship.toml"
 
 [templates.ghostty]
 input_path = './templates/ghostty-colors'
